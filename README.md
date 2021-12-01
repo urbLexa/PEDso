@@ -1,2 +1,1 @@
-# PEDSO
-Positive Energy District System Optimiser
+# PEDso - Positive Energy District System Optimiser

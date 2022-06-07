@@ -6,7 +6,7 @@ PEDso is created for an easy usage and without advanced preliminary knowledge in
 
 If the model is used for for academic work, please cite it accordingly:
 
-https://doi.org/10.3390/en14164864 and https://doi.org/10.5281/zenodo.5749268
+https://doi.org/10.1016/j.energy.2022.124152, https://doi.org/10.3390/en14164864 and https://doi.org/10.5281/zenodo.5749268
 
 
 ## Usage of PEDso
@@ -19,3 +19,7 @@ https://doi.org/10.3390/en14164864 and https://doi.org/10.5281/zenodo.5749268
 6. The model is solved. To make the most important results more readable and easier to plot, the helper file includes a function that creates a solution dictionary: run the *helpers* phython file.
 7. Save the results in a variable of your choice --> Run `results = PED(m)` --> Now the results of the solved pyomo model m are stored in the dictionary results. 
 8. To read the results from the dictionary use the the respective key `results["key"]`. The keys are the following: dict_keys(['obj', 'cost_I', 'cost_OMfix', 'cost_OMvar', 'cost_fuel', 'cost_CO2', 'cost_Ext', 'rev', 'capa_c', 'power', 'heat', 'cool', 'elEner', 'hEner', 'gridIn', 'gridInPE', 'gridEx', 'gridExPE', 'selfCons', 'selfCons_annual', 'gridInMax', 'emiss_CO2', 'emiss_CO2_annual', 'cons_fuel_vol', 'cons_fuel_e', 'emiss_PM', 'pv_groundPanelArea', 'batt_soc'])
+
+
+
+This research has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie Actions, Innovative Training Networks, Grant Agreement No. 812730.

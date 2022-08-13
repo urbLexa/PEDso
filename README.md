@@ -11,10 +11,10 @@ https://doi.org/10.1016/j.energy.2022.124152, https://doi.org/10.3390/en14164864
 
 ## Usage of PEDso
 
-1. Preparation of input files: Fill out the six Excel input files according to your case study.
-2. Open Python Environment (PEDso is written using Spyder), open the *main* python file and run it.
+1. Preparation of input files: Fill out the Excel input files according to your case study and if you want to run the annualised cost (AC) or net present value (NPV) optimisation.
+2. Open Python Environment (PEDso is written using Spyder), open the *PEDso_AC* or *PEDso_NPV* python file and run it.
 3. Save the directory link for the six spreadsheats in respective variables
-4. Run: `m = build_model(in_tech, in_loc,in_timeseries, in_emisFules, in_tariffs, in_other, projectlife = 20, dt= 60, yeardivision = None, consHeat = "Yes", consCool = "Yes")"` and change the input according to your wishes. **Attention:** Make sure that your function input is in line with you input in the spreadsheats!! --> Wait until the model is built with all its constraints. This might take a while ...
+4. Run: `m = build_model(in_tech, in_loc,in_timeseries, in_emisFules, in_tariffs, in_other, projectlife = 20, dt= 60, yeardivision = None, consHeat = "Yes", consCool = "Yes")"` and change the input according to your wishes. If the AC model is chosen, electric vehicles can be included and the file *Input_year_EV* and the selection *EV = Yes/No* needs to be given  **Attention:** Make sure that your function input is in line with you input in the spreadsheats!! --> Wait until the model is built with all its constraints. This might take a while ...
 5. Solve the model: `SolverFactory('gurobi').solve(m,tee=True, keepfiles=True)` Instead of "gurobi" other, non-commercial solvers can be used here. Any solver used needs to be installed before
 6. The model is solved. To make the most important results more readable and easier to plot, the helper file includes a function that creates a solution dictionary: run the *helpers* phython file.
 7. Save the results in a variable of your choice --> Run `results = PED(m)` --> Now the results of the solved pyomo model m are stored in the dictionary results. 
